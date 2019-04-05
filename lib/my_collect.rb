@@ -1,13 +1,10 @@
 def my_collect(arr)
-  if block_given?
     i = 0
-
+    final = []
     while i < arr.length
-      yield arr[i]
+      final << yield arr[i]
       i += 1
     end
-    arr
-  else
     arr
   end
 end
